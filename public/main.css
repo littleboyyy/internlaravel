@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    font-size: large;
+}
+header {
+   width: 100vw;
+   height: 15vh;
+   background-color:rgb(245,245,245);
+}
+.sidebar{
+    float: left;
+    width: 25%;
+    height: 70vh;
+    background-color: #DAE8FC;
+    position: relative;
+    border: 5px solid #6C8EBF;
+}
+.content{
+    float: left;
+    width: 75%;
+    height: 70vh;
+}
+section::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.table{
+    border-collapse: collapse;
+}
+.footer{
+    background-color: rgb(245,245,245);
+    height: 15vh;
+}
