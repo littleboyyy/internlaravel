@@ -7,7 +7,7 @@
         <div class="btn navbar-btn">User List</div>
         <div class="nav navbar-nav navbar-right">
             <button class="btn btn-default navbar-btn">Send mail</button>
-            <button class="btn btn-primary navbar-btn"><a href="{{route('create')}}">+Add user</a></button>
+            <button class="btn btn-primary navbar-btn"><a href="{{route('user.create')}}">+Add user</a></button>
         </div>
         </div>
     </nav>

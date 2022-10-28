@@ -17,22 +17,22 @@ use App\Http\Controllers\RoleController;
 */
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
+//Route::resource('user', 'UserController');
+/*
 Route::prefix('user')->group(function(){
     Route::get('/',[UserController::class,'index'])->name('index');
     Route::get('create',[UserController::class,'create'])->name('create');
     Route::post('create',[UserController::class,'store'])->name('store-test');
 });
-//Route::get('/create',[UserController::class,'create'])->name('create');
-//Route::post('/create',[UserController::class,'store'])->name('store-test');
-/*
-Route::post('/userss', function () {
-    echo "day la dai tieng noi viet nam phat thanh tu ha noi thu do nuoc CHXHCN Viet Nam ";
-
-})->name('testne');
 */
+Route::prefix('admin')->group(function(){
+    Route::resource('user','UserController');
+    Route::resource('role','RoleController');
+  //  Route::resource('create','UserController');
+});
+/*
 Route::prefix('role')->group(function(){
     Route::get('/',[RoleController::class,'index']);
 });
+*/

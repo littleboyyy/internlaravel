@@ -8,10 +8,10 @@
             <a class="navbar-brand">Create a User</a>
             <div class="form-inline">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-                    <a href="/user">Back</a></button>
+                    <a href="{{route('user.index')}}">Back</a></button>
             </div>
         </nav>
-        <form action="{{route('store-test')}}" method="post">
+        <form action="{{route('user.store')}}" method="post">
             @csrf
             @if (session()->has('message'))
             <div class="alert alert-success text-center">
