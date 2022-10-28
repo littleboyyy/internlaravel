@@ -9,13 +9,13 @@ li{
 }
 header {
    width: 100vw;
-   height: 15vh;
+   height: 70px;
    background-color:rgb(245,245,245);
 }
 .sidebar{
     float: left;
     width: 25%;
-    height: 70vh;
+    height: 700px;
     background-color: #DAE8FC;
     position: relative;
     border: 5px solid #6C8EBF;
@@ -23,7 +23,7 @@ header {
 .content{
     float: left;
     width: 75%;
-    height: 70vh;
+    height: 700px;
 }
 section::after{
     content: "";
@@ -35,5 +35,5 @@ section::after{
 }
 .footer{
     background-color: rgb(245,245,245);
-    height: 15vh;
+    height: 70px;
 }

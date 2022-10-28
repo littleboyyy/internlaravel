@@ -2,8 +2,8 @@
 <div class="sidebar">
   <h2>Systems</h2>
 <ul>
-  <li> <a href="#"> User management</a></li>
-  <li><a href="#">Role management</a></li>
+  <li> <a href="{{url('/user')}}"> User management</a></li>
+  <li><a href="{{url('/role')}}">Role management</a></li>
   <li><a href="#">Permission management</a></li>
 
 </ul>

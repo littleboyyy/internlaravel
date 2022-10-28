@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\RoleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,15 +16,23 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 Route::prefix('user')->group(function(){
-    Route::get('/',[UserController::class,'index']);
+    Route::get('/',[UserController::class,'index'])->name('index');
+    Route::get('create',[UserController::class,'create'])->name('create');
+    Route::post('create',[UserController::class,'store'])->name('store-test');
+});
+//Route::get('/create',[UserController::class,'create'])->name('create');
+//Route::post('/create',[UserController::class,'store'])->name('store-test');
+/*
+Route::post('/userss', function () {
+    echo "day la dai tieng noi viet nam phat thanh tu ha noi thu do nuoc CHXHCN Viet Nam ";
+
+})->name('testne');
+*/
+Route::prefix('role')->group(function(){
+    Route::get('/',[RoleController::class,'index']);
 });
