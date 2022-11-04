@@ -16,7 +16,7 @@ class CreateUsersRoles extends Migration
         Schema::create('users_roles', function (Blueprint $table) {
             $table->integer('user_id')->references('id')->on('users');
             $table->integer('role_id')->references('id')->on('roles');
-            $table->primary(['user_id', 'role_id']);
+            //$table->primary(['user_id', 'role_id']);
             $table->timestamps();
         });
     }

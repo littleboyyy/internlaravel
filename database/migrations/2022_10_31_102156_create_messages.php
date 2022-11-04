@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMassages extends Migration
+class CreateMessages extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateMassages extends Migration
      */
     public function up()
     {
-        Schema::create('massages', function (Blueprint $table) {
+        Schema::create('messages', function (Blueprint $table) {
             $table->bigInteger('id')->primary();
             $table->string('room', 255)->nullable();
             $table->bigInteger('sender_id')->nullable();
